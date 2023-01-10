@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b537d7c4-6c63-4dab-b9b7-0bcd310e9d84" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/hw01/message/avatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s1-main/App.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/../s1-main/App.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s1-main/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../s1-main/App.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../s1-main/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../s1-main/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw01/HW1.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hw01/HW1.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw01/avatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/hw01/friend-message/avatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw01/friend-message/FriendMessage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/hw01/friend-message/FriendMessage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw01/friend-message/FriendMessage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hw01/friend-message/FriendMessage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw01/message-sender/MessageSender.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/hw01/message-sender/MessageSender.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw01/message-sender/MessageSender.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hw01/message-sender/MessageSender.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw01/message/Message.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/hw01/message/Message.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw01/message/Message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hw01/message/Message.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2K8u2b0Vd68A4UiMOrvkgMMFt6R" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/pop/hws2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b537d7c4-6c63-4dab-b9b7-0bcd310e9d84" name="Changes" comment="" />
+      <created>1673368325149</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673368325149</updated>
+      <workItem from="1673368329384" duration="26000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
