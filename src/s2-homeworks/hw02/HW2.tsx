@@ -52,8 +52,7 @@ export const filterAffairs = (affairs: any, filter: FilterType): any => { // nee
     return  partfilter  // need to fix
 }
 export const deleteAffair = (affairs: any, _id: number): any => { // need to fix any
-   let  partDelete = affairs
-     affairs.filter((a: { _id: number }) => a._id !== _id)
+    let partDelete =  affairs.filter((a: { _id: number }) => a._id !== _id)
     // need to fix
     // отбрасывай при помощи метода filter лишних affairs
     return partDelete
