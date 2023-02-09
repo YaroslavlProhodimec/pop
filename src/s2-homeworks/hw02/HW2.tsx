@@ -17,16 +17,16 @@ import s2 from '../../s1-main/App.module.css'
 * */
 
 // types
-export type AffairPriorityType = any // need to fix any
+export type AffairPriorityType = 'high' | 'middle' |  'low'// need to fix any
 export type AffairType = {
-    _id: any // need to fix any
-    name: any // need to fix any
+    _id: number // need to fix any
+    name: string // need to fix any
     priority: AffairPriorityType
 }
 export type FilterType = 'all' | AffairPriorityType
 
 // constants
-const defaultAffairs: any = [ // need to fix any
+const defaultAffairs: Array<AffairType> = [ // need to fix any
     {_id: 1, name: 'React', priority: 'high'}, // студенты могут изменить содержимое name и количество элементов в массиве, ...priority не менять!
     {_id: 2, name: 'anime', priority: 'low'},
     {_id: 3, name: 'games', priority: 'low'},
@@ -35,14 +35,28 @@ const defaultAffairs: any = [ // need to fix any
 ]
 
 // pure helper functions
-export const filterAffairs = (affairs: any, filter: any): any => { // need to fix any
+export const filterAffairs = (affairs: any, filter: FilterType): any => { // need to fix any
+   let  partfilter = affairs
+    if(filter === "high") {
+       partfilter = affairs.filter((a: { priority: string }) => a.priority === 'high' )
+    }
+    if(filter === "middle") {
+         partfilter =   affairs.filter((a: { priority: string }) => a.priority === 'middle' )
+    }
+    if(filter === "low") {
+         partfilter =  affairs.filter((a: { priority: string }) => a.priority === 'low' )
+    }
+    //если пришел фильтр "all"...может нам вообще не фильтровать, а вернуть все?
+    //а вот если пришло другое значение...
 
-
-    return affairs // need to fix
+    return  partfilter  // need to fix
 }
-export const deleteAffair = (affairs: any, _id: any): any => { // need to fix any
-
-    return affairs // need to fix
+export const deleteAffair = (affairs: any, _id: number): any => { // need to fix any
+   let  partDelete = affairs
+     affairs.filter((a: { _id: number }) => a._id !== _id)
+    // need to fix
+    // отбрасывай при помощи метода filter лишних affairs
+    return partDelete
 }
 
 function HW2() {
@@ -50,8 +64,10 @@ function HW2() {
     const [filter, setFilter] = useState<FilterType>('all')
 
     const filteredAffairs = filterAffairs(affairs, filter)
-    const deleteAffairCallback = (_id: any) => { // need to fix any
-        // need to fix
+    const deleteAffairCallback = (_id: number) => { // need to fix any
+
+
+        setAffairs(deleteAffair(affairs,_id))
     }
 
     return (
@@ -60,9 +76,9 @@ function HW2() {
             <div className={s2.hw}>
                 <Affairs
                     data={filteredAffairs}
-                    setFilter={setFilter}
+                    filter={filter}          // ого useState передаем!
+                    setFilter={setFilter}    // ого useState передаем!
                     deleteAffairCallback={deleteAffairCallback}
-                    filter={filter}
                 />
             </div>
         </div>
