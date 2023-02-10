@@ -37,14 +37,15 @@ const defaultAffairs: Array<AffairType> = [ // need to fix any
 // pure helper functions
 export const filterAffairs = (affairs: any, filter: any): any => { // need to fix any
    let  partfilter = affairs
+
     if(filter === 'high') {
-       partfilter = affairs.filter(a => a.priority === 'high' )
+       partfilter = affairs.filter((a: { priority: string }) => a.priority === 'high' )
     }
     if(filter === 'middle') {
-         partfilter =   affairs.filter(a => a.priority === 'middle' )
+         partfilter =   affairs.filter((a: { priority: string }) => a.priority === 'middle' )
     }
     if(filter === 'low') {
-         partfilter =  affairs.filter(a => a.priority === 'low' )
+         partfilter =  affairs.filter((a: { priority: string }) => a.priority === 'low' )
     }
     //если пришел фильтр "all"...может нам вообще не фильтровать, а вернуть все?
     //а вот если пришло другое значение...
