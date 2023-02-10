@@ -35,22 +35,24 @@ const defaultAffairs: Array<AffairType> = [ // need to fix any
 ]
 
 // pure helper functions
-export const filterAffairs = (affairs: any, filter: any): any => { // need to fix any
-   let  partfilter = affairs
-
+export const filterAffairs = (affairs: any, filter: FilterType): any => { // need to fix any
+   let  filteredAffairs = affairs
+    if(filter === 'all') {
+        filteredAffairs = affairs.filter( true )
+    }
     if(filter === 'high') {
-       partfilter = affairs.filter((a: { priority: string }) => a.priority === 'high' )
+        filteredAffairs = affairs.filter((a: { priority: string }) => a.priority === 'high' )
     }
     if(filter === 'middle') {
-         partfilter =   affairs.filter((a: { priority: string }) => a.priority === 'middle' )
+        filteredAffairs =   affairs.filter((a: { priority: string }) => a.priority === 'middle' )
     }
     if(filter === 'low') {
-         partfilter =  affairs.filter((a: { priority: string }) => a.priority === 'low' )
+        filteredAffairs =  affairs.filter((a: { priority: string }) => a.priority === 'low' )
     }
     //если пришел фильтр "all"...может нам вообще не фильтровать, а вернуть все?
     //а вот если пришло другое значение...
 
-    return  partfilter  // need to fix
+    return  filteredAffairs  // need to fix
 }
 export const deleteAffair = (affairs: any, _id: number): any => { // need to fix any
     let partDelete = affairs.filter((a: { _id: number }) => a._id !== _id)
