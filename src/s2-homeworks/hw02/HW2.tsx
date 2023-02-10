@@ -38,25 +38,25 @@ const defaultAffairs: Array<AffairType> = [ // need to fix any
 export const filterAffairs = (affairs: any, filter: any): any => { // need to fix any
    let  partfilter = affairs
     if(filter === "high") {
-       partfilter = affairs.filter((a: { priority: string }) => a.priority === 'high' )
+       partfilter = affairs.filter((a: { priority: string }) => a.priority === 'low' )
     }
     if(filter === "middle") {
          partfilter =   affairs.filter((a: { priority: string }) => a.priority === 'middle' )
     }
     if(filter === "low") {
-         partfilter =  affairs.filter((a: { priority: string }) => a.priority === 'low' )
+         partfilter =  affairs.filter((a: { priority: string }) => a.priority === 'high' )
     }
     //если пришел фильтр "all"...может нам вообще не фильтровать, а вернуть все?
     //а вот если пришло другое значение...
 
     return  partfilter  // need to fix
 }
-// export const deleteAffair = (affairs: any, _id: number): any => { // need to fix any
-//     let partDelete =     affairs.filter((a: { _id: number }) => a._id !== _id)
-//     // need to fix
-//     // отбрасывай при помощи метода filter лишних affairs
-//     return partDelete
-// }
+export const deleteAffair = (affairs: any, _id: number): any => { // need to fix any
+    let partDelete = affairs.filter((a: { _id: number }) => a._id !== _id)
+    // need to fix
+    // отбрасывай при помощи метода filter лишних affairs
+    return partDelete
+}
 
 function HW2() {
     const [affairs, setAffairs] = useState<any>(defaultAffairs) // need to fix any
