@@ -26,7 +26,7 @@ export type AffairType = {
 export type FilterType = 'all' | AffairPriorityType
 
 // constants
-const defaultAffairs: Array<AffairType> = [ // need to fix any
+let defaultAffairs: Array<AffairType> = [ // need to fix any
     {_id: 1, name: 'React', priority: 'high'}, // студенты могут изменить содержимое name и количество элементов в массиве, ...priority не менять!
     {_id: 2, name: 'anime', priority: 'low'},
     {_id: 3, name: 'games', priority: 'low'},
@@ -35,31 +35,27 @@ const defaultAffairs: Array<AffairType> = [ // need to fix any
 ]
 
 // pure helper functions
-export const filterAffairs = (affairs: AffairType[], filter: FilterType): any => { // need to fix any
-
+export let filterAffairs = (affairs: AffairType[], filter: FilterType): any => { // need to fix any
+   let  partfilter = affairs
     if(filter === 'high') {
-      return affairs.filter((a: { priority: string }) => a.priority === 'high' )
+        partfilter = affairs.filter((a: { priority: string }) =>  a.priority === 'high' )
     }
     if(filter === 'middle') {
-         return   affairs.filter((a: { priority: string }) => a.priority === 'middle' )
+         partfilter =   affairs.filter((a: { priority: string }) => a.priority === 'middle' )
     }
     if(filter === 'low') {
-        return  affairs.filter((a: { priority: string }) => a.priority === 'low' )
+         partfilter =  affairs.filter((a: { priority: string }) => a.priority === 'low' )
     }
-    //если пришел фильтр "all"...может нам вообще не фильтровать, а вернуть все?
-    //а вот если пришло другое значение...
-
-    return  affairs  // need to fix
+    return  partfilter  // need to fix
 }
-export const deleteAffair = (affairs: any, _id: number): any => { // need to fix any
+export const deleteAffair = (affairs: AffairType[], _id: number): any => { // need to fix any
     let partDelete = affairs.filter((a: { _id: number }) => a._id !== _id)
     // need to fix
     // отбрасывай при помощи метода filter лишних affairs
     return partDelete
 }
-
 function HW2() {
-    const [affairs, setAffairs] = useState<any>(defaultAffairs) // need to fix any
+    const [affairs, setAffairs] = useState<Array<AffairType>>(defaultAffairs) // need to fix any
     const [filter, setFilter] = useState<FilterType>('all')
 
     const filteredAffairs = filterAffairs(affairs, filter)
